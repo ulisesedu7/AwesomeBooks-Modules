@@ -3,6 +3,8 @@
 Imports from Modules 
 */
 // import { DateTime } from './node_modules/luxon/src/luxon.js';
+//Import Date from luxon
+import {DateTime} from "./modules/luxon.js";
 
 // Main constructor import
 import {BookInfo} from './modules/module-1.js';
@@ -96,3 +98,10 @@ contactLink.addEventListener('click', () => {
   toggleVisbility(contactSection);
   clearClasses(allBooksSection, addNewBookSection);
 });
+
+// Date and Time 
+const nowDate = DateTime.now();
+
+const dateDiv = document.getElementById('date');
+
+dateDiv.innerHTML = nowDate;
