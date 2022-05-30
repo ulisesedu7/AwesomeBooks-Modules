@@ -11,6 +11,8 @@ To get a local copy up and running follow these simple example steps.
 
 Modern web browser with Javascript enabled
 
+Run Git Clone + URL of project
+
 ## Authors
 
 👤 **Ulises Largaespada**
