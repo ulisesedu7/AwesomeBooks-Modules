@@ -1,4 +1,4 @@
-import {LocalStorage} from '../modules/module-3.js';
+import LocalStorage from './module-3.js';
 
 const bookName = document.getElementById('book-name');
 const authorName = document.getElementById('author-name');
@@ -13,7 +13,6 @@ class StoredInfo {
   }
 
   static addbookToList(book) {
-
     const articleBook = document.createElement('article');
 
     articleBook.innerHTML = `
@@ -24,7 +23,7 @@ class StoredInfo {
   }
 
   static removeBook(element) {
-    if(element.classList.contains('remove')) {
+    if (element.classList.contains('remove')) {
       element.parentElement.remove();
     }
   }
@@ -35,4 +34,4 @@ class StoredInfo {
   }
 }
 
-export {StoredInfo};
+export default StoredInfo;

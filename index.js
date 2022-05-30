@@ -1,75 +1,70 @@
 /* eslint-disable max-classes-per-file */
 /*
-Imports from Modules 
+Imports from Modules
 */
-// import { DateTime } from './node_modules/luxon/src/luxon.js';
-//Import Date from luxon
-import {DateTime} from "./modules/luxon.js";
+// Import Date from luxon
+import { DateTime } from './modules/luxon.js';
 
 // Main constructor import
-import {BookInfo} from './modules/module-1.js';
+import BookInfo from './modules/module-1.js';
 
-// Stored Information - Add book class import 
-import {StoredInfo} from './modules/module-2.js';
+// Stored Information - Add book class import
+import StoredInfo from './modules/module-2.js';
 
-// Local Storage import 
-import {LocalStorage} from './modules/module-3.js';
+// Local Storage import
+import LocalStorage from './modules/module-3.js';
 
 // toggle visibility function import
-import {toggleVisbility} from './modules/module-4.js';
+import toggleVisbility from './modules/module-4.js';
 
 // clear classes function import
-import {clearClasses} from './modules/module-5.js';
+import clearClasses from './modules/module-5.js';
 
-// Main Code 
+// Main Code
 const bookName = document.getElementById('book-name');
 const authorName = document.getElementById('author-name');
 const formInput = document.querySelector('#new-book');
 
 const bookSection = document.getElementById('book-list');
 
-// Display Books 
+// Display Books
 document.addEventListener('DOMContentLoaded', StoredInfo.displayBooks);
 
-// Submission Form Event - Add Book 
+// Submission Form Event - Add Book
 formInput.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Get Values
   const title = bookName.value;
-  const author = authorName.value; 
+  const author = authorName.value;
 
   // Form Validation
-  if (title != '' && author != '') {
+  if (title !== '' && author !== '') {
     // Instate Book
     const book = new BookInfo(title, author);
 
     // Add book to List
     StoredInfo.addbookToList(book);
 
-    // Add book to Local Storage 
+    // Add book to Local Storage
     LocalStorage.addBookStorage(book);
 
     // Clear Inputs
     StoredInfo.clearInputs();
-  } 
-  else {
-    alert('Name a book please')
   }
-  
 });
 
-// Remove Book Event 
+// Remove Book Event
 bookSection.addEventListener('click', (e) => {
   // Remove book
   StoredInfo.removeBook(e.target);
 
-  // Remove book from Storage 
+  // Remove book from Storage
   LocalStorage.removeBookStorage(e.target.previousElementSibling.innerHTML);
 });
 
 /*
-Const from HTML for 
+Const from HTML for
 */
 const allBooksSection = document.getElementById('all-books');
 const addNewBookSection = document.getElementById('add-new-book');
@@ -99,7 +94,7 @@ contactLink.addEventListener('click', () => {
   clearClasses(allBooksSection, addNewBookSection);
 });
 
-// Date and Time 
+// Date and Time
 const nowDate = DateTime.now();
 
 const dateDiv = document.getElementById('date');

@@ -3,7 +3,7 @@ class LocalStorage {
   static getBooks() {
     let books;
 
-    if(localStorage.getItem('books') === null) {
+    if (localStorage.getItem('books') === null) {
       books = [];
     } else {
       books = JSON.parse(localStorage.getItem('books'));
@@ -12,7 +12,7 @@ class LocalStorage {
     return books;
   }
 
-  static addBookStorage (book) {
+  static addBookStorage(book) {
     const books = LocalStorage.getBooks();
 
     books.push(book);
@@ -24,8 +24,8 @@ class LocalStorage {
     const books = LocalStorage.getBooks();
 
     books.forEach((book, index) => {
-      if(book.title + ' by ' + book.author === content) {
-        books.splice(index, 1); 
+      if (`${book.title} by ${book.author}` === content) {
+        books.splice(index, 1);
       }
     });
 
@@ -33,4 +33,4 @@ class LocalStorage {
   }
 }
 
-export {LocalStorage};
+export default LocalStorage;

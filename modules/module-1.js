@@ -5,4 +5,4 @@ class BookInfo {
   }
 }
 
-export {BookInfo};
+export default BookInfo;
