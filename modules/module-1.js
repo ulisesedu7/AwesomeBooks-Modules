@@ -1,9 +1,8 @@
-class Book {
-  constructor(title = 'New Book', author = 'John Doe', id) {
+class BookInfo {
+  constructor(title, author) {
     this.title = title;
     this.author = author;
-    this.id = id;
   }
 }
 
-export {Book};
+export {BookInfo};
