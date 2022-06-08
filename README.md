@@ -3,6 +3,16 @@
 
 This repository contains an web app that allows to add and remove book's data using Javascript
 
+## Built With
+
+- HTML
+- CSS
+- Javascript
+- Git & Github
+
+## Live Demo
+- Check the live demo of my page [here](https://ulisesedu7.github.io/AwesomeBooks-Modules/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -11,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 
 Modern web browser with Javascript enabled
 
-Run Git Clone + URL of project
+Run: `Git Clone + 'URL of project'`
 
 ## Authors
 
