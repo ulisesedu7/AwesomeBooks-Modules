@@ -1,5 +1,4 @@
 # Awesome-Books
-> Description the project.
 
 This repository contains an web app that allows to add and remove book's data using Javascript
 
